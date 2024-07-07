@@ -4,7 +4,7 @@ module halfadder (input a,b,output sum,carry);
 endmodule
 
 module fulladder(input a,b,cin,output sum,carry);
-  wire c1,s,c2;
+  //wire s,c1,c2;
   assign sum=a^b^cin;
   assign carry=a&b|b&cin|cin&a;
 /*
