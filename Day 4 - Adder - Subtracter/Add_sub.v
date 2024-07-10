@@ -9,7 +9,7 @@ module fulladder(input a,b,cin,output sum,carry);
   */
 endmodule
 
-module add_sub(input [3:0]a,b,input k,output [3:0]sum,output carryout);
+module add_sub(input [3:0]a,b,input k,output [3:0]sum,output carryout,output [5:0]result);
   wire [3:0]b_comp;
   wire c0,c1,c2;
   assign b_comp[0]=b[0]^k;
@@ -21,4 +21,5 @@ module add_sub(input [3:0]a,b,input k,output [3:0]sum,output carryout);
   fulladder dut1(a[1],b_comp[1],k,s[1],c1);
   fulladder dut1(a[2],b_comp[2],k,s[2],c2);
   fulladder dut1(a[3],b_comp[3],k,s[3],carry_out);
+  assign result = {carryout,sum};
 endmodule
