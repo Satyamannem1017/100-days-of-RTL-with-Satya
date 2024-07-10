@@ -4,7 +4,7 @@ module adder_tb;
   reg a,b;
   wire sum,carry;
 
-  adder dut(a,b,sum,carry);
+  halfadder dut(a,b,sum,carry);
 
   initial begin
     repeat(10) begin
@@ -25,7 +25,7 @@ module adder_tb;
   reg a,b,cin;
   wire sum,carry;
 
-  adder dut(a,b,cin,sum,carry);
+  fulladder dut(a,b,cin,sum,carry);
 
   initial begin
     repeat(10) begin
