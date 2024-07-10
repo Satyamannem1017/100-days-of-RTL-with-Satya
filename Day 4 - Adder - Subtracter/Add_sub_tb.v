@@ -7,6 +7,7 @@ module add_sub_tb;
   add_sub a1(a,b,k,sum,carryout,result);
 
   initial begin
+    k=1'b0;
     repeat(10) begin
       a=$urandom;
       b=$urandom;
