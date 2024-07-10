@@ -18,8 +18,8 @@ module add_sub(input [3:0]a,b,input k,output [3:0]sum,output carryout,output [5:
   assign b_comp[3]=b[3]^k;
 
   fulladder dut1(a[0],b_comp[0],k,sum[0],c0);
-  fulladder dut1(a[1],b_comp[1],k,sum[1],c1);
-  fulladder dut1(a[2],b_comp[2],k,sum[2],c2);
-  fulladder dut1(a[3],b_comp[3],k,sum[3],carry_out);
+  fulladder dut1(a[1],b_comp[1],c0,sum[1],c1);
+  fulladder dut1(a[2],b_comp[2],c1,sum[2],c2);
+  fulladder dut1(a[3],b_comp[3],c2,sum[3],carry_out);
   assign result = {carryout,sum};
 endmodule
