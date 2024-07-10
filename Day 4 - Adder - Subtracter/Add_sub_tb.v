@@ -1,8 +1,8 @@
 module add_sub_tb;
-  reg [3:0]sum;
-  reg carryout;
-  wire [3:0]a,b;
-  wire k;   //control signal
+  wire [3:0]sum;
+  wire carryout;
+  reg [3:0]a,b;
+  reg k;   //control signal
   wire [5:0]result;
   add_sub a1(a,b,k,sum,carryout,result);
 
